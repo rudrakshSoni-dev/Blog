@@ -93,11 +93,11 @@ jobs:
           echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
           echo "Production deployed to: $DEPLOYMENT_URL"
 
-      - name: Create Deployment Summary
-        run: |
-          echo "## ✅ Production Deployment Successful! 🚀" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**URL:** ${{ steps.deploy-prod.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Author:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+    #   - name: Create Deployment Summary
+    #     run: |
+    #       echo "## ✅ Production Deployment Successful! 🚀" >> $GITHUB_STEP_SUMMARY
+    #       echo "" >> $GITHUB_STEP_SUMMARY
+    #       echo "**URL:** ${{ steps.deploy-prod.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+    #       echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+    #       echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+    #       echo "**Author:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
